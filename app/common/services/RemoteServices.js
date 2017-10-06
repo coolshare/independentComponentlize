@@ -45,7 +45,12 @@ class RemoteService {
 		});
 	}
 	get(param) {
-		//$.get	
+		$.get(param.url, function(res) {
+			cm.publish("/"+this.id+"/Get"+"/Response", res);
+			if (param.handler) {
+				param.handler(res)
+			}
+		});
 	}
 	remove(param) {
 		//$.delete	
