@@ -10,25 +10,24 @@
 
 	To show the structure and workflow, please take a look at the picture below.
 
------work flow picture-----
 
-Explanation of the workflow picture:
-CM: communication manager
-NAV: Navigation component
-HS: House Service
-RS: Remote Service
-RA: Rest API
-
-NAV ----1----> CM : Navigation component send request to communication manager by publish
-CM ----2----> HS : House Service accept requests from components by subscribe
-HS ----3----> CM : House Service request another service from RemoteService by publish
-CM ----4----> RS : Remote Service receive requests from communication manager by subscribe
-RS ----5----> RA : Remote Service to access back end server to get data 
-RA ----6----> RS : Back end server return data back to Remote Service
-RS ----7----> CM : Remote Service return back data to communication manager
-CM ----8----> HS : communication manager return data to House Service by subscribe
-HS ----9----> CM : House Service return back data to communication manager
-CM ----10----> NAV: communication manager return data to original requester: Navigation 					component by publish
+	Explanation of the workflow picture:
+	CM: communication manager
+	NAV: Navigation component
+	HS: House Service
+	RS: Remote Service
+	RA: Rest API
+	
+	NAV ----1----> CM : Navigation component send request to communication manager by publish
+	CM ----2----> HS : House Service accept requests from components by subscribe
+	HS ----3----> CM : House Service request another service from RemoteService by publish
+	CM ----4----> RS : Remote Service receive requests from communication manager by subscribe
+	RS ----5----> RA : Remote Service to access back end server to get data 
+	RA ----6----> RS : Back end server return data back to Remote Service
+	RS ----7----> CM : Remote Service return back data to communication manager
+	CM ----8----> HS : communication manager return data to House Service by subscribe
+	HS ----9----> CM : House Service return back data to communication manager
+	CM ----10----> NAV: communication manager return data to original requester: Navigation 					component by publish
 
 
 
