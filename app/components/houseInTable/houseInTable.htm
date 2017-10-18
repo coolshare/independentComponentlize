@@ -1,0 +1,40 @@
+	<h2>This page is for house in table</h2>
+	<p id="demo"></p>
+<script type="text/javascript">
+
+
+	displayHouseData(houseData){
+		console.log(houseData);
+
+		    var obj = JSON.parse(houseData);
+		    var txt = '';
+		    var i = '';
+
+		    txt += "<table border='1'>";
+		    var val = obj.comparables[0];
+
+		    for(var j in val){
+
+		            txt += "<th>";
+		            var sub_key = j;
+		            //var sub_val = val[j];
+		            txt += sub_key;
+		            txt += "</th>";
+		    }
+		    for ( i in obj.comparables  ) {
+		        txt += "<tr><td>" + obj.comparables[i].score + "</td>";
+		        txt += "<td>" + obj.comparables[i].zpid + "</td>";
+		        txt += "<td>" + obj.comparables[i].percentile + "</td>";
+		        txt += "<td>" + obj.comparables[i].street + "</td></tr>";
+		    }
+		    txt += "</table>";  
+		    document.getElementById("demo").innerHTML = txt;
+	}
+	
+	
+	
+
+</script>
+</body>
+</html>
+	

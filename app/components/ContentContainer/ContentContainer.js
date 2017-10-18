@@ -5,16 +5,8 @@ contentContainerModule.controller('contentContainerController', function($scope,
 	//use the controller as the caller (this) when invoke the subscription handler.
 	this.id = "contentContainerController";
 	
-	$scope.$on("topicB", function(event,data)
-	{
-		$scope.screen = data.id;
-	})
+
 	
-	CommunicationManager.subscribe("/Nav/Update", function(data) {
-		$timeout(function() {
-			$scope.screen = data.id;
-		}, 0)
-	}, this);
 		
 })
 contentContainerModule.directive('contentContainer', function() {
@@ -24,3 +16,4 @@ contentContainerModule.directive('contentContainer', function() {
     	controller: 'contentContainerController'
     };
 });
+io

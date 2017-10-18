@@ -1,10 +1,10 @@
 'use strict';
 
 // Defining Angular app model with all other dependent modules
-var communicationStrategyApp = angular.module('communicationStrategyApp',['ngRoute',
-	'communicationStrategyApp.home','communicationStrategyApp.about','communicationStrategyApp.login','communicationStrategyApp.test','comNavigationModule','contentContainerModule', 'sendMessageWithEmitBroadcastModule','sendMessageWithPubSubModule','sendMessageWithRootScopeModule','sendMessageWithServiceModule']);
+var componentizeApp = angular.module('componentizeApp',['ngRoute',
+	'comNavigationModule','contentContainerModule', 'contentContainerModule','comNavigationModule','houseInTableModule','houseInMapModule']);
 
-communicationStrategyApp.config(function($routeProvider, $locationProvider, $httpProvider) {
+componentizeApp.config(function($routeProvider, $locationProvider, $httpProvider) {
 	$locationProvider.html5Mode(true);
 	// Declaration of the default route if neither of the controllers
 	// is supporting the request path
