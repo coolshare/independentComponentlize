@@ -1,6 +1,7 @@
 		Highly componentized web application
 
-	When a simple web application becomes complicated by adding more new features, new customers, new responsibilities, what is a good solution for the task? This is a problem I'm facing in the company. Our web application has already in production serving customers. We have to introduce the new features in as transparent as possible to the customers. It should not affect existing infrastructure and should be easy to test and maintain. 
+	When a simple web application becomes complicated by adding more new features, new customers, new responsibilities, what is a good solution for the task? This is a problem I'm facing in the company. Our web application has already in production serving customers. We have to introduce the new features in as transparent as possible to the customers. It should not affect existing infrastructure and should be easy to test and maintain.
+	 
   
 	A highly componentized web application can make the job easier, more efficient and flexible. This is what happened in my projects in the company. 
 
@@ -10,13 +11,9 @@
 	
 	**Live Demo:**
 
-<a href="https://leileili.github.io/independentComponentlize/app">independentComponentize</a>
-
+	<a href="https://leileili.github.io/independentComponentlize/app">independent Componentlize</a>
+	
 	To show the structure and workflow, please take a look at the picture below.
-
-**Live Demo:**
-
-<a href="https://leileili.github.io/independentComponentlize/app">independent Componentize</a>
 
 	Explanation of the workflow picture:
 	CM: communication manager
