@@ -7,6 +7,10 @@
 	Inside my web application, there are different components, services and back end database server, then the main part: communication manager. 
 	
 	When the different components and services want to communicate with each other, componentized approach will make it much flexible. For example , component A need to get data from database server C, Service B has the function of database server C connection ; component A will publish its request to communication manager. In the mean time, service B also subscribe to communication manager to register its functionality. So when a request comes, communication manager will know which service to call to get the job done and which component to return back the data. And this method can be used between services too. 
+	
+	**Live Demo:**
+
+<a href="https://leileili.github.io/independentComponentlize/app">independentComponentize</a>
 
 	To show the structure and workflow, please take a look at the picture below.
 
