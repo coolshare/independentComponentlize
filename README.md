@@ -1,10 +1,12 @@
-		Highly componentized web application
+		<h3><center> ***Highly componentized web application***</center></h3>
 
+<p>
 	When a simple web application becomes complicated by adding more new features, new customers, new responsibilities, what is a good solution for the task? This is a problem I'm facing in the company. Our web application has already in production serving customers. We have to introduce the new features in as transparent as possible to the customers. It should not affect existing infrastructure and should be easy to test and maintain.
-	 
+</p>
+<p>	 
   
 	A highly componentized web application can make the job easier, more efficient and flexible. This is what happened in my projects in the company. 
-
+</p>
 	Inside my web application, there are different components, services and back end database server, then the main part: communication manager. 
 	
 	When the different components and services want to communicate with each other, componentized approach will make it much flexible. For example , component A need to get data from database server C, Service B has the function of database server C connection ; component A will publish its request to communication manager. In the mean time, service B also subscribe to communication manager to register its functionality. So when a request comes, communication manager will know which service to call to get the job done and which component to return back the data. And this method can be used between services too. 
@@ -15,7 +17,7 @@
 	
 	To show the structure and workflow, please take a look at the picture below.
 
-	Explanation of the workflow picture:
+	**Explanation of the workflow picture:**
 	CM: communication manager
 	NAV: Navigation component
 	HS: House Service
