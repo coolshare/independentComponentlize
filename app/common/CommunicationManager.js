@@ -18,12 +18,8 @@ class Topic {
 }
 
 
-communicationStrategyApp.service("CommunicationManager",function(){
-	 window.cm = new PubSubManager()
-	 return window.cm
-})
 
-function PubSubManager() {
+function CommunicationManager() {
 	this.topicMap = {}
 	this.subscribe = function(topicName, handler, owner){
 			 var topic = this.topicMap[topicName];
@@ -46,3 +42,5 @@ function PubSubManager() {
 	     }
 	     
 }
+
+window.cm = new CommunicationManager()

@@ -1,6 +1,6 @@
 var comNavigationModule = angular.module('comNavigationModule', []);
  
-comNavigationModule.controller('comNavigationController', function($scope,$timeout,$rootScope,$http,CommunicationManager, ServiceCommunication) {	
+comNavigationModule.controller('comNavigationController', function($scope,$timeout,$rootScope,$http,CommunicationManager) {	
 
     $scope.getHouseData = function(){
     	//publish to communication manager

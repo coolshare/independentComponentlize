@@ -10,6 +10,9 @@
 
 	To show the structure and workflow, please take a look at the picture below.
 
+**Live Demo:**
+
+<a href="https://leileili.github.io/independentComponentlize/app">independent Componentize</a>
 
 	Explanation of the workflow picture:
 	CM: communication manager
