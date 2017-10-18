@@ -1,4 +1,4 @@
-		<h3><center> ***Highly componentized web application***</center></h3>
+		 ***Highly componentized web application***
 
 <p>
 	When a simple web application becomes complicated by adding more new features, new customers, new responsibilities, what is a good solution for the task? This is a problem I'm facing in the company. Our web application has already in production serving customers. We have to introduce the new features in as transparent as possible to the customers. It should not affect existing infrastructure and should be easy to test and maintain.
