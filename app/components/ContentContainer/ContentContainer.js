@@ -1,5 +1,5 @@
 var contentContainerModule = angular.module('contentContainerModule', []);
-contentContainerModule.controller('contentContainerController', function($scope, $timeout, CommunicationManager, $rootScope) {
+contentContainerModule.controller('contentContainerController', function($scope, $timeout) {
 	//Add an id field to the owner so that we can use a map to container subscribers to prevent
 	//redundantly subscribing. We use "this"(the controller) as owner so that we can 
 	//use the controller as the caller (this) when invoke the subscription handler.

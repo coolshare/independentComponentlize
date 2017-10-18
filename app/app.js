@@ -2,7 +2,7 @@
 
 // Defining Angular app model with all other dependent modules
 var componentizeApp = angular.module('componentizeApp',['ngRoute','componentizeApp.about',
-	'componentizeApp.test','comNavigationModule','contentContainerModule', 'contentContainerModule','comNavigationModule','houseInTableModule','houseInMapModule']);
+	'componentizeApp.test','navigationModule','contentContainerModule','houseInTableModule','houseInMapModule']);
 
 componentizeApp.config(function($routeProvider, $locationProvider, $httpProvider) {
 	$locationProvider.html5Mode(true);
