@@ -38,8 +38,10 @@ class RemoteService {
 		//$.put	
 	}
 	getAll(param) {
+		var self = this;
 		$.get(param.url, function(res) {
-			cm.publish("/"+this.id+"/getAll"+"/Response", res);
+			
+			cm.publish("/"+self.id+"/getAll"+"/Response", res);
 			if (param.handler) {
 				param.handler(res)
 			}

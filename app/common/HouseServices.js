@@ -1,13 +1,16 @@
 class HouseService {
 	constructor() {
 		this.id = "HouseService"
-		this.url = "./house.json"
+		this.url = "../house.json"
 		this.serviceName = "RemoteService"
+		this.houseCols = ["Street", "City", "State", "Zip"]
 		this.init()
 	};
 	
 	init() {
-		
+		cm.subscribe("/"+this.id+"/getCols", function() {
+			cm.publish("/"+this.id+"/getCols/Response", this.houseCols)
+		}, this);
 		//accept requests from components (2)
 		cm.subscribe("/"+this.id+"/Create", function(data) {
 			this.create(data);
@@ -28,23 +31,23 @@ class HouseService {
 		//get response from remote service (8)
 		cm.subscribe("/"+this.serviceName+"/Response", function(data) {
 			//get back to components (9)
-			cm.publish("/"+this.name+"/Create"+"/Response", {"url":this.url, "data":data})
+			cm.publish("/"+this.id+"/Create"+"/Response", {"url":this.url, "data":data})
 		}, this);
 		cm.subscribe("/"+this.serviceName+"/Edit"+"/Response", function(data) {
 			//get back to components (9)
-			cm.publish("/"+this.name+"/Edit"+"/Response", {"url":this.url, "data":data})
+			cm.publish("/"+this.id+"/Edit"+"/Response", {"url":this.url, "data":data})
 		}, this);
 		cm.subscribe("/"+this.serviceName+"/getAll"+"/Response", function(data) {
 			//get back to components (9)
-			cm.publish("/"+this.name+"/getAll"+"/Response", {"url":this.url, "data":data})
+			cm.publish("/"+this.id+"/getAll"+"/Response", data.comparables)
 		}, this);
 		cm.subscribe("/"+this.serviceName+"/Get"+"/Response", function(data) {
 			//get back to components (9)
-			cm.publish("/"+this.name+"/Get"+"/Response", {"url":this.url, "data":data})
+			cm.publish("/"+this.id+"/Get"+"/Response", {"url":this.url, "data":data})
 		}, this);
 		cm.subscribe("/"+this.serviceName+"/Delete"+"/Response", function(data) {
 			//get back to components (9)
-			cm.publish("/"+this.name+"/Delete"+"/Response", {"url":this.url, "data":data})
+			cm.publish("/"+this.id+"/Delete"+"/Response", {"url":this.url, "data":data})
 		}, this);
 	}
 	

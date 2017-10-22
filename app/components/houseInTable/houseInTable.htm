@@ -1,11 +1,25 @@
-	<h2>This page is for house in table</h2>
-	<p id="demo"></p>
-<script type="text/javascript">
 
+
+<div style="overflow:auto;height:200px">
+	<table border=1>
+	  <tr>
+	  	<th ng-repeat="k in cols" style="width:120px">{{k}}</th>
+	  	<th ></th>
+	  </tr>
+	  <tr ng-repeat="x in houses">
+	    
+	    <td>{{ x.street }}</td>
+	    <td>{{ x.city }}</td>
+	    <td>{{ x.state }}</td>
+	    <td>{{ x.zipcode }}</td>
+	    <td>
+	    <button ng-click="addToMap(x)">Add to Map</button>
+	    </td>
+	  </tr>
+	</table>
+
+</div>
 
 	
 
-</script>
-</body>
-</html>
 	

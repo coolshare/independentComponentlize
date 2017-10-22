@@ -1,17 +1,27 @@
 var houseInTableModule = angular.module('houseInTableModule', []);
 houseInTableModule.controller('houseInTableController', function($scope,$timeout) {
-	$scope.title = "";
-	$scope.message = "";
-
-	cm.subscribe("/Nav/Update", function(data) {
+			
+	$scope.addToMap = function(x) {
+		cm.publish("/addToMap",x);
+	}
+	
+	cm.subscribe("/HouseService/getAll/Response", function(data) {
 		$timeout(function() {
-			$scope.title = data.Label;
-		}, 0)
+			$scope.houses = data;
+		})
+		
 	}, this);
 	
+	cm.subscribe("/HouseService/getCols/Response", function(data) {
+		$timeout(function() {
+			$scope.cols = data;
+		})
+		
+	}, this);
 	
-})
-	
+	cm.publish("/HouseService/getCols");
+});
+
 
 houseInTableModule.directive('houseInTable', function() {
     return {
