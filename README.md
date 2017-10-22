@@ -20,13 +20,13 @@ I put together a small demo to explain how it was done in my Oracle project. Thi
 		
 **Live Demo:**
 
-<a href="https://leileili.github.io/independentComponentlize/app">independent Componentize</a>
+<a href="./app/">independent Componentize</a>
 
 
 The demo application appear as a "container". This container contains 5 isolated objects: 3 components (A, B, and C) for UI view and 2 services (X and Y) for remote data access. The 3 UI view components are: navigation , houseInTable and houseInMap. 
 
 Here is all the communication image:
-![Alt text](./workflow2.png?raw=true "Optional Title")
+![Alt text](./workflow2.png?raw=true "Independent Componentize Workflow Picture")
 
 The first component, navigation (A) is used to accept user's input to request data in order to fill houseInTable (B) by publish topic "/HouseService/getAll". A has no idea about who is going to use the data it request. Its only job is take user input and publish "/HouseService/getAll".
 
@@ -42,9 +42,9 @@ The subscribing and publishing can be used directly between two UI view componen
 
 The houseInMap (C) doesn't subscribed to topic related to "/HouseServices" or "/RemoteServices", but subscribes to "AddToMap" topic in communication manager. so it gets the data with the same topic by subscribing.
 
-The keys on my approach are:
+**The keys on my approach are:**
 
-1). My application contains only encapsulated objects: components for view and services to perform tasks
+1). My application contains only encapsulated objects: components for view and services to perform tasks</br>
 2). All my components and services are highly isolated: they never make any reference to each other
 
 
