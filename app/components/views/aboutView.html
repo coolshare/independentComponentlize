@@ -1,4 +1,14 @@
 <div class="center">
-	<div>AngularJS starter application</div>
-	<div>This is About View</div>
+<p>	Highly componentized web application</p>
+<br>
+Problem:	When a simple web application becomes complicated and larger with hundreds or even thousand of components, team-working-in-parallel and communication among components become challenges. As business coverage group, components come and go more frequently. Developers need to spend a lot of time to modify dependency. 
+<br>
+Solution: One of solution to this problem is to make the components highly isolated.
+<br>
+I will describe how I achieved building a highly isolated-componentized application in one of my Oracle projects.
+<br>
+I used the pattern of publish/subscribe as my major communication method. My application was a container containing a series of isolated components/services. Each component/service only input data by
+subscribing "topics" and only output data by publishing "topics". In this way, no component nor service has any knowledge about others (components and services). They only deal with a single party, the CommunicationManager which provides publishing and subscribing.
+<br>
+I put together a small demo to explain how it was done in my Oracle project. This small demo was written in AngularJS.
 </div>
