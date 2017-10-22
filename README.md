@@ -42,6 +42,8 @@ The subscribing and publishing can be used directly between two UI view componen
 
 The houseInMap (C) doesn't subscribed to topic related to "/HouseServices" or "/RemoteServices", but subscribes to "AddToMap" topic in communication manager. so it gets the data with the same topic by subscribing.
 
+So the main purpose of HouseServices is to taking care of processing house data; for RemoteService, it is in charge of house data connection to database. They take care of their own job without interfere others jobs. Same for the other three compnents, each has its own role, navigation knows only user input; houseInTable only knows about data on table; houseInMap only does data on map. 
+
 **The keys on my approach are:**
 
 1). My application contains only encapsulated objects: components for view and services to perform tasks</br>
