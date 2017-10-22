@@ -26,7 +26,7 @@ I put together a small demo to explain how it was done in my Oracle project. Thi
 The demo application appear as a "container". This container contains 5 isolated objects: 3 components (A, B, and C) for UI view and 2 services (X and Y) for remote data access. The 3 UI view components are: navigation , houseInTable and houseInMap. 
 
 Here is all the communication image:
-![Alt text](./workflow2.png?raw=true "Independent Componentize Workflow Picture")
+![Alt text](./workflow3.png?raw=true "Independent Componentize Workflow Picture")
 
 The first component, navigation (A) is used to accept user's input to request data in order to fill houseInTable (B) by publish topic "/HouseService/getAll". A has no idea about who is going to use the data it request. Its only job is take user input and publish "/HouseService/getAll".
 
