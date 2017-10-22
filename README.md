@@ -20,7 +20,7 @@ I put together a small demo to explain how it was done in my Oracle project. Thi
 		
 **Live Demo:**
 
-<a href="./app/">independent Componentize</a>
+<a href="./app/index.html">independent Componentize</a>
 
 
 The demo application appear as a "container". This container contains 5 isolated objects: 3 components (A, B, and C) for UI view and 2 services (X and Y) for remote data access. The 3 UI view components are: navigation , houseInTable and houseInMap. 
