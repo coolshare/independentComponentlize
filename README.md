@@ -9,7 +9,7 @@ As business coverage group, components come and go more frequently. Developers n
 <b>Solution:</b>
 One of solution to this problem is to make the components highly isolated.
 
-I will describe how I achieved building a highly isolated-componentized application in one of my Oracle projects. 
+I will describe how I achieved building a highly isolated-componentized application in one of my work projects. 
   
 I used the pattern of publish/subscribe as my major communication method. 
 My application was a container containing a series of isolated components/services. Each component/service only input data by  
