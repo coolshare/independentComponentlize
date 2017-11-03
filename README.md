@@ -15,7 +15,7 @@ I used the pattern of publish/subscribe as my major communication method.
 My application was a container containing a series of isolated components/services. Each component/service only input data by  
 subscribing "topics" and only output data by publishing "topics". In this way, no component nor service has any knowledge about others (components and services). They only deal with a single party, the CommunicationManager which provides publishing and subscribing.
 
-I put together a small demo to explain how it was done in my Oracle project. This small demo was written in AngularJS.
+I put together a small demo to explain how it was done in my work project. This small demo was written in AngularJS.
 
 		
 **Live Demo:**
